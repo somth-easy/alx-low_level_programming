@@ -1,7 +1,7 @@
 #include "main.h"
 
 /*
- * _memset - The memory area pointed to by @s will be filled with @n bytes of the value @b.
+ * _memset - Memset function.
  * @s: points to an array of bytes in memory.
  * @b: stores a single byte of data.
  * @n: bytes of the memory area
