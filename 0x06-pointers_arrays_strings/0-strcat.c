@@ -6,12 +6,11 @@
  * @src:char
  * Return:char
  */
-char *_strcat(char *dest, const char *src)
+char *_strcat(char *dest, char *src)
 {
 char *s = dest;
-while (*dest)
-{
- dest++;
+while (*dest) {
+dest++;
 }
 while ((*dest++ = *src++)) {}
 return s;
