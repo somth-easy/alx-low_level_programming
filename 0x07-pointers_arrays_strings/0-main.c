@@ -12,23 +12,23 @@
 
 void simple_print_buffer(char *buffer, unsigned int size)
 {
-        unsigned int i;
+unsigned int i;
 
-        i = 0;
-        while (i < size)
-        {
-                if (i % 10)
-                {
-                        printf(" ");
-                }
-                if (!(i % 10) && i)
-                {
-                        printf("\n");
-                }
-                printf("0x%02x", buffer[i]);
-                i++;
-        }
-        printf("\n");
+i = 0;
+while (i < size)
+{
+if (i % 10)
+{
+printf(" ");
+}
+if (!(i % 10) && i)
+{
+printf("\n");
+}
+printf("0x%02x", buffer[i]);
+i++;
+}
+rintf("\n");
 }
 
 /**
@@ -38,11 +38,11 @@ void simple_print_buffer(char *buffer, unsigned int size)
  */
 int main(void)
 {
-    char buffer[102] = {0x00};
+char buffer[102] = {0x00};
 
-    simple_print_buffer(buffer, 102);
-    _memset(buffer, 0x01, 92);
-    printf("-------------------------------------------------\n");
-    simple_print_buffer(buffer, 102);
-    return (0);
+simple_print_buffer(buffer, 102);
+_memset(buffer, 0x01, 92);
+printf("-------------------------------------------------\n");
+simple_print_buffer(buffer, 102);
+return (0);
 }
