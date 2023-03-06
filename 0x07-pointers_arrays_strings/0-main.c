@@ -38,11 +38,11 @@ rintf("\n");
  */
 int main(void)
 {
-char buffer[102] = {0x00};
+char buffer[98] = {0x00};
 
-simple_print_buffer(buffer, 102);
-_memset(buffer, 0x01, 92);
+simple_print_buffer(buffer, 98);
+_memset(buffer, 0x01, 95);
 printf("-------------------------------------------------\n");
-simple_print_buffer(buffer, 102);
+simple_print_buffer(buffer, 98);
 return (0);
 }
