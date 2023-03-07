@@ -1,4 +1,4 @@
-#inlcude "mian.h"
+#include "main.h"
 
 /*
  * _strcat - concatinates 2 strings
