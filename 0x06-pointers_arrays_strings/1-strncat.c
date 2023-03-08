@@ -8,7 +8,7 @@
  *
  * Return: A pointer to the beginning of the modified destination string
  */
-char *_strncat(char *dest, const char *src, size_t n)
+char *_strncat(char *dest, const char *src, int n)
 {
 char *s = dest;
 while (*dest)
@@ -20,5 +20,5 @@ while (*src && n--)
 *dest++ = *src++;
 }
 *dest = '\0';
-return s;
+return (s);
 }
