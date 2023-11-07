@@ -2,7 +2,7 @@
 #include <unistd.h>
 
 /**
- * main: Prints with write function
+ * main - Prints with write function
  *
  * Return: 1 Always
  */
