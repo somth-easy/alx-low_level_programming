@@ -1,0 +1,5 @@
+#!/bin/bash
+
+destinaion=${CFILE%%*/}.s
+
+gcc -S $CFILE -0 $destination
