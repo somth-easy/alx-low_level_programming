@@ -1,5 +1,2 @@
 #!/bin/bash
-
-destinaion=${CFILE%%*/}.s
-
-gcc -S $CFILE -0 $destination
+gcc -S $CFILE -0 ${CFILE%%.*}.s
