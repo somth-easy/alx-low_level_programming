@@ -4,7 +4,7 @@
 /**
  * main - Prints with write function
  *
- * Return: 1 Always
+ * Return: always (1)
  */
 
 int main(void)
