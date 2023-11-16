@@ -2,82 +2,67 @@
 #include <stdlib.h>
 
 /**
- * main - entry point
+ * main - Entry Point
  *
- * Return: Alway (0)
+ * Return: Always (0)
  */
 
-int main(void)
+int main()
 {
-	int n1, n2, n3, n4, x, y/*, z*/;
+	int a, b, c, d, var_1, var_2;
 
-	for (n1 = '0'; n1 <= '9'; n1++){
-		x = 1;
-		y = 1;
-		/*z = 1;*/
-		for (n2 = '0'; n2 <= '9'; n2++)
+	var_1 = 1;
+
+	for (a = '0'; a >= '0' && a <= '9'; a++)
+	{
+		for (b = '0'; b >= '0' && b <= '9'; b++)
 		{
-			/*x = 1;*/
-
-			for (n3 = '0'; n3 <= '9'; n3++){ 
-
-				for (n4 = '0'; n4 <= '9'; n4++){
-					if (n1 == '0' && n2 == '0' && n3 == '0' && n4 == '0'){
-						n4 = '1';
+			var_2 = 1;
+			for (c = '0'; c >= '0' && c <= '9'; c++)
+			{
+				for (d = '0'; d >= '0' && d <= '9'; d++)
+				{
+					if (var_1 > 0)
+					{
+						d = '1';
 					}
-					if (n1 >= '0' && n2 >= '0' && n3 == '0' && n4 == '0'/*&& z != 0*/){
-						/*z = 0;*/
-						if (n2 == '9' && n3 >= '0'){
-							n3 = n1 + 1;
-							goto sk_ip3;
-						}
-						n4 = n2 + 1;
+					else if (a >= '1' && b == '9' && var_2 != 0)
+					{
+						c = a + 1;
+						var_2 = 0;
 					}
-sk_ip3:
-
-					if (n1 >= '1' && n1 <= '9' && n3 == '0'){
-						n3 = n1;
-						if (n1 >= '1' && n2 == '0' && n4 == '0' && y != 0){
-							y = y - 1;
-							n4 = '1';
-						}
+					else if (a >= '1' && c == '0' && d == '0')
+					{
+						d = b + 1;
+						c = a;
 					}
-					if (n1 >= '1' && n2 >= '0' && n2 <= '9' && n4 == '0' && x !=0){
-						x = 0;
-						if (n2 == '9' && n3 >= '1'){
-							n3 = n1 + 1;
-							goto sk_ip1;
-						}
-						if (n1 >= '2'){
-							if (n2 >= '1' && n4 == '0'){
-								goto sk_ip2;
-							}
-							goto sk_ip1;
-						}
-/*sk_ip3:*/
-sk_ip2:
-						n4 = n2 + 1;
-sk_ip1:
-						x = 0;
+					else if (a <= '0' && b >= '1' && b < '9' && c == '0' && d == '0')
+					{
+						d = b + 1;
 					}
-				putchar(n1);
-				putchar(n2);
-				putchar(' ');
-
-				putchar(n3);
-				putchar(n4);
-				
-				if (n1 == '9' && n2 == '8' && n3 == '9' && n4 == '9'){
-					goto end_of_file;
-				}
-				putchar(',');
-				putchar(' ');
+					else if (a <= '0' && b == '9' && c == '0')
+					{
+						c = a + 1;
+					}
+					
+					putchar(a);
+					putchar(b);
+					putchar(' ');
+					putchar(c);
+					putchar(d);
+					if (a == '9' && b == '8' && c == '9' && d == '9')
+					{
+						goto end_now;
+					}
+					putchar(',');
+					putchar(' ');
+					
+					var_1 = 0;
 				}
 			}
 		}
 	}
-end_of_file:
-
+end_now:
 	putchar('\n');
 
 	return (0);
