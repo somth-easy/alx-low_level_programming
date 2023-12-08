@@ -10,55 +10,27 @@
 
 int main(void)
 {
-        int a, b, c, d;
+	int num1, num2;
 
-        d = c = b = a = '0';
-        while (a <= '9')
-        {
-                if (a >= '1')
-                {
-                        b = '0';
-                        c = a;
-                        d = b + 1;
-                }
-                while (b <= '9')
-                {
-                        if (b >= '1' &&  b < '9' && a < '1')
-                        {
-                                c = a;
-                                d = b + 1;
-                        }
-                        if (b == '9' && a < '1')
-                        {
-                                c = a + 1;
-                                d = '0';
-                        }
-                        if (a >= '1' && b >= '1')
-                        {
-                                c = a;
-                                d = b + 1;
-                        }
-                        while (c <= '9')
-                        {
-                                if (c >= '1' && c != a)
-                                        d = '0';
-                                if (a == '0' && b == '0' && c == '0' && d == '0')
-                                        d = '1';
-                                while (d <= '9')
-                                {
-                                        putchar(a);
-                                        putchar(b);
-                                        putchar(' ');
-                                        putchar(c);
-                                        putchar(d);
-                                        if (a == '9' && b == '8' && c == '9' && d == '9')
-                                                break;
-                                        putchar(',');
-                                        putchar(' ');
-                                        ++d;
-                                } ++c;
-                        } ++b;
-                } ++a;
-        } putchar('\n');
-        return (0);
+	for (num1 = 0; num1 <= 98; num1++)
+	{
+		for (num2 = num1 + 1; num2 <= 99; num2++)
+		{
+			putchar((num1 / 10) + '0');
+			putchar((num1 % 10) + '0');
+			putchar(' ');
+			putchar((num2 / 10) + '0');
+			putchar((num2 % 10) + '0');
+
+			if (num1 == 98 && num2 == 99)
+				continue;
+
+			putchar(',');
+			putchar(' ');
+		}
+	}
+
+	putchar('\n');
+
+	return (0);
 }
