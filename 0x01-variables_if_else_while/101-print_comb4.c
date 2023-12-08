@@ -1,56 +1,43 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
+
+/**
+ * main - entry point
+ *
+ * Return: Always (0)
+ */
 
 int main(void)
 {
-        int a, b, c, d;
 
-        d = c = b = a = '0';
-        while (a <= '9')
-        {
-                if (a >= '1')
-                {
-                        b = '0';
-                        c = a;
-                        d = b + 1;
-                }
-                while (b <= '9')
-                {
-                        if (b >= '1' &&  b < '9' && a < '1')
-                        {
-                                c = a;
-                                d = b + 1;
-                        }
-                        if (b == '9' && a < '1')
-                        {
-                                c = a + 1;
-                                d = '0';
-                        }
-                        if (a >= '1' && b >= '1')
-                        {
-                                c = a;
-                                d = b + 1;
-                        }
-                        while (c <= '9')
-                        {
-                                if (c >= '1' && c != a)
-                                        d = '0';
-                                while (d <= '9')
-                                {
-                                        putchar(a);
-                                        putchar(b);
-                                        putchar(' ');
-                                        putchar(c);
-                                        putchar(d);
-                                        if (a == '9' && b == '8' && c == '9' && d == '9')
-                                                break;
-                                        putchar(',');
-                                        putchar(' ');
-                                        ++d;
-                                } ++c;
-                        } ++b;
-                } ++a;
-        } putchar('\n');
-        return (0);
+int a, b, c;
+
+for (a = '0'; a <= '7'; a++)
+{
+for (b = '1'; b <= '8'; b++)
+{
+if (a >= '1' && a <= '7' && b == '1')
+{
+b = b + (a - '0');
+}
+for (c = '2'; c <= '9'; c++)
+{
+if (b >= '1' && b <= '8' && c == '2')
+{
+c = c + (b - '1');
+}
+putchar(a);
+putchar(b);
+putchar(c);
+if (a == '7' && b == '8' && c == '9')
+break;
+putchar(',');
+putchar(' ');
+}
+}
+}
+
+putchar('\n');
+
+return (0);
 }
