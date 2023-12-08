@@ -36,6 +36,8 @@ int main(void)
                         {
                                 if (c >= '1' && c != a)
                                         d = '0';
+                                if (a == '0' && b == '0' && c == '0' && d == '0')
+                                        d = '1';
                                 while (d <= '9')
                                 {
                                         putchar(a);
