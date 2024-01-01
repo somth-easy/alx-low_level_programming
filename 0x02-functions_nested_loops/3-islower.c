@@ -10,11 +10,10 @@ int _islower(int c)
 {
 	char current, start = 'a', end = 'z';
 
-	for(current = start; current <= end ; current++)
+	for (current = start; current <= end ; current++)
 	{
 		if (current == c)
 		{
-		
 			return (1);
 		}
 	}
