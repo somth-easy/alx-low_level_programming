@@ -2,7 +2,7 @@
 
 /**
  * _islower - Entry point
- *
+ * @c: stores parssed value to the funciton
  * Return: on success
  */
 
