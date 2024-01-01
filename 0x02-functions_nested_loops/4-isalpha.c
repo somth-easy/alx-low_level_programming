@@ -1,9 +1,11 @@
 #include "main.h"
 
 /**
- * _isalpha - Entry point
+ * _isalpha - Check if a character is an alphabetic character (either uppercase or lowercase)
+ *
  * @c: hold copy of value parsed to function
- * Return; on success
+ *
+ * Return: on success
  */
 
 int _isalpha(int c)
