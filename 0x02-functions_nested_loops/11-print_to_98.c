@@ -22,7 +22,7 @@ void print_to_98(int n)
 
 	i = under_0(i);
 
-	if (i >= 0 && i <= 98)
+	if (i >= 0 && i < 98)
 	{
 		while (i < 10)
 		{
@@ -62,9 +62,9 @@ void over_98(int n)
 	i = n;
 	x = 1;
 
-	if (i > 98)
+	if (i >= 98)
 	{
-		for (i = n; i > 98; i--)
+		for (i = n; i >= 98; i--)
 		{
 			if (i > 100)
 			{
