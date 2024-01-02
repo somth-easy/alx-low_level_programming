@@ -9,7 +9,7 @@
  */
 
 void over_98(int n);
-void under_0(int n);
+int under_0(int n);
 
 
 void print_to_98(int n)
@@ -19,7 +19,8 @@ void print_to_98(int n)
 	i = n;
 
 	over_98(i);
-	under_0(i);
+
+	i = under_0(i);
 
 	if (i >= 0 && i <= 98)
 	{
@@ -98,7 +99,7 @@ void over_98(int n)
  * Return: on success
  */
 
-void under_0(int n)
+int under_0(int n)
 {
 	int i, m;
 
@@ -123,4 +124,5 @@ void under_0(int n)
 			i++;
 		}
 	}
+	return (i);
 }
