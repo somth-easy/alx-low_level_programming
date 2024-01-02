@@ -101,19 +101,26 @@ void over_98(int n)
 
 int under_0(int n)
 {
-	int i, m;
+	int i, m, x;
 
 	i = n;
 
 	if (i < 0)
 	{
 		m = i * -1;
+		x = 1;
 
 		while (m > 0)
 		{
 			_putchar('-');
 
-			if (m > 9)
+			if (m >= 100)
+			{
+				_putchar(x + '0');
+				_putchar(((m - 100) / 10) + '0');
+			}
+
+			if (m > 9 && m < 100)
 			{
 				_putchar((m / 10) + '0');
 			}
