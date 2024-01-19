@@ -13,10 +13,13 @@ void puts2(char *str)
 
 	size_t length = strlen(str);
 
-	while (i <= length && length > 0)
+	while (i <= length && length > 0 && *ptr != '\0')
 	{
 		_putchar(ptr[i]);
-		i += 2;
+		if (*ptr != '\0')
+		{
+			i += 2;
+		}
 	}
 	_putchar('\n');
 }
