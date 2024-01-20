@@ -4,9 +4,11 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <bool.h>
+#include <stdbool.h>
+#include <unistd.h>
 
-char *_strcat(char, char);
+int _putchar(char);
+char *_strcat(char *, char *);
 char *_strncat(char, char, int);
 char *_strncpy(char, char, int);
 int _strcmp(char, char);
