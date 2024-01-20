@@ -2,7 +2,7 @@
 
 /**
  * _strcpy - entry point
- * @dest: char pointer 
+ * @dest: char pointer
  * @src: char pointer
  * Return: on return
  */
@@ -10,7 +10,7 @@
 char *_strcpy(char *dest, char *src)
 {
 	int i;
-	
+
 	for (i = 0; src[i] != '\0'; i++)
 	{
 		dest[i] = src[i];
