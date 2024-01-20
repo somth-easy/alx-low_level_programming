@@ -10,7 +10,6 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	/* size_t a = strlen(src); */
 	size_t i;
 	size_t x = (size_t)n;
 
