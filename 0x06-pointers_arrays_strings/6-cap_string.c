@@ -17,7 +17,7 @@ char *cap_string(char *c)
 	{
 		for (b = 0; d[b] != '\0'; b++)
 		{
-			if ((i == 0) || c[i - 1] == d[b] && c[i] >= 'a' && c[i] <= 'z')
+			if ((i == 0 || c[i - 1] == d[b]) && c[i] >= 'a' && c[i] <= 'z')
 			{
 				c[i] = c[i] - 'a' + 'A';
 			}
