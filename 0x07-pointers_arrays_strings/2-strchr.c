@@ -14,12 +14,15 @@ char *_strchr(char *s, char c)
 	while (s[i] != '\0' || s[i] == c)
 	{
 
-		if (s[i] == '\0' || s[i] == c)
+		if (s[i] == c)
 		{
 			return (s);
 		}
+		if ((s[i] == c) == '\0')
+		{
+			return (NULL);
+		}
 		s++;
 	}
-
-	return (s);
+	return (NULL);
 }
