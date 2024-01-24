@@ -58,6 +58,9 @@ jump:
 		y = 0;
 
 	}
+	if (tmp[y] == '\0')
+		goto end;
 	x++;
+end:
 	return (x);
 }
