@@ -9,58 +9,27 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	int i, n = 0, y = 0, z = 0;
 	unsigned int x = 0;
-	char tmp[50];
+	int i = 0, n;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (; accept[i]; i++)
 	{
-		if (y == 0 && i == 0)
+		n = 0;
+		while (s[n])
 		{
-			while (accept[z] != s[i])
+			if (accept[i] == s[n])
 			{
-				if (accept[z] == '\0')
-					goto skip;
-				z++;
+				x++;
+				break;
 			}
-			tmp[y] = s[i];
-			y++;
-			tmp[y] = '\0';
-			n++; x++;
+			n++;
 		}
-skip:
-		z = 0;
-		while (tmp[y] != '\0')
-		{
-			while (accept[z] != s[i])
-			{
-				if (accept[z] == '\0')
-				{
-					goto jump;
-				}
-				z++;
-			}
-			if ((tmp[y] == s[i]) && (tmp[y + 1] != '\0' || tmp[y + 1] == '\0'))
-			{
-				goto jump;
-			}
-			y++;
-			if (tmp[y] == '\0')
-			{
-				tmp[y] = s[i];
-				y++;
-				tmp[y] = '\0';
-				n++; x++;
-			}
-
-		}
-jump:
-		y = 0;
-
 	}
-	if (tmp[y] == '\0')
-		goto end;
-	x++;
-end:
+
+	if (x != 0)
+	{
+		x++;
+	}
 	return (x);
+
 }
