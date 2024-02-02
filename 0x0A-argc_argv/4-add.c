@@ -22,8 +22,8 @@ int main(int argc, char *argv[])
 	while (argc >= 1)
 	{
 		retval += atoi(argv[argc]);
-		if ((argv[argc][0] >= 'a' && argv[argc][0] <= 'z') ||
-		argv[argc][0] >= 'A' && argv[argc][0] <= 'Z')
+		if (((argv[argc][0] >= 'a') && (argv[argc][0] <= 'z')) ||
+		((argv[argc][0] >= 'A') && (argv[argc][0] <= 'Z')))
 			break;
 		argc--;
 	}
