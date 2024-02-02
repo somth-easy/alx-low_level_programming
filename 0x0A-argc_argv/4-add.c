@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 
 		for (i = 0; argv[argc][i] != '\0'; i++)
 		{
-			if (argv[argc][i] >= 'a' && argv[argc][i] <= 'z')
+			if (argv[argc][i] >= '0' && argv[argc][i] <= '9')
 				goto end;
 		}
 		argc--;
