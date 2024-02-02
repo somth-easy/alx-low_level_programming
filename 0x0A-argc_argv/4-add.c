@@ -9,7 +9,7 @@
 
 int main(int argc, char *argv[])
 {
-	int retval = 0;
+	int retval = 0, i;
 
 	if ((argc - 1) == 0)
 	{
@@ -22,11 +22,15 @@ int main(int argc, char *argv[])
 	while (argc >= 1)
 	{
 		retval += atoi(argv[argc]);
-		if (((argv[argc][0] >= 'a') && (argv[argc][0] <= 'z')) ||
-		((argv[argc][0] >= 'A') && (argv[argc][0] <= 'Z')))
-			break;
+
+		for (i = 0; argv[argc][i] != '\0'; i++)
+		{
+			if (argv[argc][i] >= 'a' && argv[argc][i] <= 'z')
+				goto end;
+		}
 		argc--;
 	}
+end:
 	if (argc == 0)
 		printf("%d\n", retval);
 
