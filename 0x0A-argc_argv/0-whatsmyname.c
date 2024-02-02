@@ -10,6 +10,7 @@
 int main(int argc, char *argv[])
 {
 	_puts(*argv++);
+	argc--;
 
 	return (0);
 }
