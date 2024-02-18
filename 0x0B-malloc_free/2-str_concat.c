@@ -13,9 +13,6 @@ char *str_concat(char *s1, char *s2)
 	size_t size1 = 0, size2 = 0, len = 0;
 	unsigned int i, n;
 
-	if (s1 == NULL && s2 == NULL)
-		return (NULL);
-
 	if (s1)
 	{
 		for (size1 = 0; s1[size1] != '\0'; size1++)
