@@ -1,6 +1,24 @@
 #include "main.h"
 
 /**
+ * _memset - entry point
+ * @str: agurment one
+ * @c: argument two
+ * @x: argument three
+ * Return: on success
+ */
+
+char *_memset(char *str, char c, unsigned int x)
+{
+	unsigned int i;
+
+	for (i = 0; i < x; i++)
+		str[i] = c;
+
+	return (str);
+}
+
+/**
  * _calloc - entry point
  * @nmemb: argument one
  * @size: argument two
@@ -20,8 +38,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (ptr == NULL)
 		return (NULL);
 
-	for (i = 0; i < nmemb; i++)
-		ptr[i] = '0';
+	_memset(ptr, 0, nmemb);
 
 	return (ptr);
 }
