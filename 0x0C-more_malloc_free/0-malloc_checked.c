@@ -8,7 +8,6 @@
 
 void *malloc_checked(unsigned int b)
 {
-	int i;
 	void *ptr;
 
 	if (b == 0)
